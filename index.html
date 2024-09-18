@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Movie Ticket Booking</title>
+</head>
+
+<body>
+
+  <div class="main-body">
+    <!--Movie select option-->
+    <div class="movie-container">
+      <label> Select a movie:</label>
+      <select id="movie">
+        <option value="220">Gadar 2 (RS.220)</option>
+        <option value="200">OMG 2 (RS.200)</option>
+        <option value="250">Jailer (RS.250)</option>
+      </select>  
+    </div>
+
+    <!--Showcase-->
+    <ul class="showcase">
+      <li>
+        <div class="seat"></div>
+        <small>Available</small>
+      </li>
+      <li>
+        <div class="seat selected"></div>
+        <small>Selected</small>
+      </li>
+      <li>
+        <div class="seat sold"></div>
+        <small>Sold</small>
+      </li>
+    </ul>
+
+    <!--Main Container-->
+    <div class="container">
+      <div class="screen"></div>
+
+      <div class="row">
+        <div class="seat">1</div>
+        <div class="seat">2</div>
+        <div class="seat">3</div>
+        <div class="seat">4</div>
+        <div class="seat">5</div>
+        <div class="seat">6</div>
+        <div class="seat">7</div>
+        <div class="seat">8</div>
+      </div>
+
+      <div class="row">
+        <div class="seat">9</div>
+        <div class="seat">10</div>
+        <div class="seat">11</div>
+        <div class="seat sold">12</div>
+        <div class="seat sold">13</div>
+        <div class="seat">14</div>
+        <div class="seat">15</div>
+        <div class="seat">16</div>
+      </div>
+
+      <div class="row">
+        <div class="seat">17</div>
+        <div class="seat">18</div>
+        <div class="seat">19</div>
+        <div class="seat">20</div>
+        <div class="seat">21</div>
+        <div class="seat">22</div>
+        <div class="seat sold">23</div>
+        <div class="seat sold"></div>
+      </div>
+
+      <div class="row">
+        <div class="seat">24</div>
+        <div class="seat">25</div>
+        <div class="seat">26</div>
+        <div class="seat">27</div>
+        <div class="seat">28</div>
+        <div class="seat">29</div>
+        <div class="seat">30</div>
+        <div class="seat">31</div>
+      </div>
+
+      <div class="row">
+        <div class="seat">32</div>
+        <div class="seat">33</div>
+        <div class="seat">34</div>
+        <div class="seat sold">35</div>
+        <div class="seat sold">36</div>
+        <div class="seat">37</div>
+        <div class="seat">38</div>
+        <div class="seat">39</div>
+      </div>
+      <div class="row">
+        <div class="seat">40</div>
+        <div class="seat">41</div>
+        <div class="seat">42</div>
+        <div class="seat">43</div>
+        <div class="seat sold">44</div>
+        <div class="seat sold">45</div>
+        <div class="seat sold">46</div>
+        <div class="seat">47</div>
+      </div>
+
+
+      <div class="timings">
+        <div class="dates">
+          <input type="radio" name="date" id="d1" checked>
+          <label for="d1" class="dates-item">
+            <div class="day">Fri</div>
+            <div class="date">12</div>
+          </label>
+          <input type="radio" name="date" id="d2">
+          <label for="d2" class="dates-item">
+            <div class="day">Sat</div>
+            <div class="date">13</div>
+          </label>
+          <input type="radio" name="date" id="d3">
+          <label for="d3" class="dates-item">
+            <div class="day">Sun</div>
+            <div class="date">14</div>
+          </label>
+          <input type="radio" name="date" id="d4">
+          <label for="d4" class="dates-item">
+            <div class="day">Mon</div>
+            <div class="date">15</div>
+          </label>
+          <input type="radio" name="date" id="d5">
+          <label for="d5" class="dates-item">
+            <div class="day">Tue</div>
+            <div class="date">16</div>
+          </label>
+          <input type="radio" name="date" id="d6">
+          <label for="d6" class="dates-item">
+            <div class="day">Wed</div>
+            <div class="date">17</div>
+          </label>
+          <input type="radio" name="date" id="d7">
+          <label for="d7" class="dates-item">
+            <div class="day">Thu</div>
+            <div class="date">18</div>
+          </label>
+        </div>
+        <div class="times">
+          <input type="radio" name="time" id="t1" checked>
+          <label for="t1" class="time">06:00 AM</label>
+          <input type="radio" name="time" id="t2">
+          <label for="t2" class="time">12:30 PM</label>
+          <input type="radio" name="time" id="t3">
+          <label for="t3" class="time">06:00 PM</label>
+          <input type="radio" name="time" id="t4">
+          <label for="t4" class="time">09:00 PM</label>
+        </div>
+      </div>
+    </div>
+    <div class="btndiv">
+      <p class="text">
+        You have selected <span id="count">0</span> seat for a price of RS.<span id="total">0</span>
+      </p>
+      <button type="button" class="bookbtn">Book</button>
+      <button class="booked-ticket">show ticket</button>
+    </div>
+
+    
+
+  </div>
+
+  <!-- ticket card desing is started from here.. -->
+
+  <div class="card-container deactive">
+    <div class="ticket-card">
+      <div class="movie-details-card">
+        <h2 class="movie-title-card">Inception</h2>
+        <p class="genre-card">Action | Sci-Fi | Thriller</p>
+        <p class="time-card">Showing Time: <span class="show-time"></span></p>
+        <p class="date-card">Date: September <span class="card-day"></span>,<span class="card-date"></span> 2024</p>
+      </div>
+      <div class="seat-info-card">
+        <p><strong>Seat:</strong> <span class="seatno"></span></p>
+        <p><strong>No of Seats:</strong><span class="noseat"></span></p>
+        <p><strong>Hall:</strong> IMAX 3D</p>
+        <p><strong>Ticket No:</strong> 123456</p>
+        <p><strong>Ticket price:</strong><span class="ticket-price"></span></p>
+      </div>
+      <div class="barcode">
+        <p>Scan for Entry</p>
+        <div class="barcode-line"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

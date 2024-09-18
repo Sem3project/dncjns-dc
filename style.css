@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #032533;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1px;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.main-body{
+  width: 100%;
+  background-color: #032533;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+
+}
+
+.movie-container {
+  margin: 20px 0;
+  width: auto;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 26px;
+  width: 32px;
+  margin: 3px;
+  font-size: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.selected {
+  background-color: green;
+}
+
+.seat.sold {
+  background-color: #fff;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.seat:not(.sold):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.sold):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+  .row .seat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+  }
+.screen {
+  background-color: #fff;
+  height: 120px;
+  width: 100%;
+  margin: 2px 0;
+  transform: rotateX(-58deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+  margin: 2px 0;
+}
+
+p.text span {
+  color: rgb(158, 248, 158);
+}
+
+.btndiv{
+  margin: 20px auto;
+  width: 40%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.btndiv button{
+  width: 80px;
+  height: 34px;
+  border: none;
+  outline: none;
+  background-color: blueviolet;
+  color: aquamarine;
+  border-radius: 8px;
+}
+.btndiv .booked-ticket{
+  background-color: rgb(66, 100, 66);
+   display: hidden;
+}
+
+
+.timings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.dates {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dates-item {
+  width: 50px;
+  height: 50px;
+  background: rgb(71, 39, 39);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.day {
+  font-size: 12px;
+}
+
+.times {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.time {
+  font-size: 14px;
+  width: fit-content;
+  padding: 7px 14px;
+  background: rgb(75, 44, 44);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.timings input:checked+label {
+  background: #47a3ff;
+  color: white;
+}
+
+.price {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.total div {
+  display: flex;
+  gap: 4px;
+}
+
+.total span {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ticket card css is started from here */
+
+.ticket-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;margin-top: 30px;
+}
+
+.movie-details-card {
+  text-align: center;
+}
+
+.movie-title-card {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.genre-card {
+  font-size: 0.80rem;
+  color: #666;
+}
+
+.time-card, .date-card {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.seat-info-card {
+  background-color: #f0f0f0;
+  padding: 3px;
+  border-radius: 5px;
+  margin-top: 11px;
+}
+
+.seat-info-card p {
+  font-size: 0.80rem;
+  color: #333;
+}
+
+.barcode {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.barcode p {
+  font-size: 0.6rem;
+  color: #666;
+}
+
+.barcode-line {
+  width: 80%;
+  height: 30px;
+  background: repeating-linear-gradient(
+      90deg,
+      #000,
+      #000 3px,
+      #fff 3px,
+      #fff 6px
+  );
+  margin: 5px auto;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.deactive{
+  width: 0px;
+  overflow: hidden;
+}
+.active{
+  width: 500px;
+  overflow: hidden;
+}
+
+
+.showbtn{
+  display: block;
+}
